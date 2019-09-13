@@ -35,7 +35,7 @@ func TestMsgsnd(t *testing.T) {
 			t.Fatal(err)
 		}
 		defer func(qid uint64) {
-			err := ipc.Msgctl(qid, ipc.IPC_RMID)
+			err := ipc.Msgctl(qid, ipc.IPC_RMID, nil)
 			if err != nil {
 				t.Fatal(err)
 			}
@@ -87,7 +87,7 @@ func ExampleMsgsnd() {
 
 	// remove queue in the end
 	defer func() {
-		err := ipc.Msgctl(qid, ipc.IPC_RMID)
+		err := ipc.Msgctl(qid, ipc.IPC_RMID, nil)
 		if err != nil {
 			log.Fatal(err)
 		}

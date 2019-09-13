@@ -28,7 +28,7 @@ func TestMsgrcv(t *testing.T) {
 	}
 
 	defer func() {
-		err = ipc.Msgctl(qid, ipc.IPC_RMID)
+		err = ipc.Msgctl(qid, ipc.IPC_RMID, nil)
 		if err != nil {
 			t.Fatal(err)
 		}
@@ -85,7 +85,7 @@ func TestMsgrcvBlocks(t *testing.T) {
 			t.Fatal(err)
 		}
 		defer func() {
-			err = ipc.Msgctl(qid, ipc.IPC_RMID)
+			err = ipc.Msgctl(qid, ipc.IPC_RMID, nil)
 			if err != nil {
 				t.Fatal(err)
 			}

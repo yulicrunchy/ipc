@@ -35,7 +35,8 @@ func TestMsgctl(t *testing.T) {
 			t.Fatal(err)
 		}
 
-		err = ipc.Msgctl(uint64(qid), ipc.IPC_RMID)
+		var msginfo ipc.Msginfo
+		err = ipc.Msgctl(uint64(qid), ipc.IPC_RMID, &msginfo)
 		if err != nil {
 			t.Fatal(err)
 		}

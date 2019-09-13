@@ -10,10 +10,12 @@ func Msgrcv(qid uint64, msg *Msgbuf, flags uint64) error {
 	qbuf := msgbufInternal{
 		Mtype: msg.Mtype,
 	}
+	qbuf.Mtext = make([]byte, BufSize)
+
 	lengthRead, _, err := syscall.Syscall6(syscall.SYS_MSGRCV,
 		uintptr(qid),
 		uintptr(unsafe.Pointer(&qbuf)),
-		uintptr(bufSize),
+		uintptr(BufSize),
 		uintptr(msg.Mtype),
 		uintptr(flags),
 		0,

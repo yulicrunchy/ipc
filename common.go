@@ -17,10 +17,6 @@ const (
 	IPC_PRIVATE = 0 // Private key. NOTE: this value is of type __key_t, i.e., ((__key_t) 0)
 )
 
-const (
-	bufSize = 128
-)
-
 type Msgbuf struct {
 	Mtype uint64
 	Mtext []byte
@@ -28,5 +24,9 @@ type Msgbuf struct {
 
 type msgbufInternal struct {
 	Mtype uint64
-	Mtext [bufSize]byte
+	Mtext []byte
+}
+
+type Msginfo struct {
+	Msgmax int
 }
