@@ -1,1 +1,1 @@
-module github.com/siadat/ipc
+module github.com/yulicrunchy/ipc

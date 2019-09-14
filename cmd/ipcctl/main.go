@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/siadat/ipc"
+	"github.com/yulicrunchy/ipc"
 )
 
 func main() {

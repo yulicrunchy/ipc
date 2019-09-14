@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/siadat/ipc"
+	"github.com/yulicrunchy/ipc"
 )
 
 func TestMsgmax(t *testing.T) {

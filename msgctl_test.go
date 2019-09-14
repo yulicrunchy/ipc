@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/siadat/ipc"
-	"github.com/siadat/ipc/cgo_ftok"
+	"github.com/yulicrunchy/ipc"
+	"github.com/yulicrunchy/ipc/cgo_ftok"
 )
 
 func TestMsgctl(t *testing.T) {
