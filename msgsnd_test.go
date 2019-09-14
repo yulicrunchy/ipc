@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/siadat/ipc"
+	"github.com/yulicrunchy/ipc"
 )
 
 func TestMsgsnd(t *testing.T) {

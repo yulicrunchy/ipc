@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/siadat/ipc"
+	"github.com/yulicrunchy/ipc"
 )
 
 func TestMsgrcv(t *testing.T) {

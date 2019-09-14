@@ -5,8 +5,8 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/siadat/ipc"
-	"github.com/siadat/ipc/cgo_msgget"
+	"github.com/yulicrunchy/ipc"
+	"github.com/yulicrunchy/ipc/cgo_msgget"
 )
 
 func TestMsgget(t *testing.T) {
