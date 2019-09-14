@@ -18,7 +18,7 @@ const (
 )
 
 const (
-	bufSize = 128
+	BufSize = 128
 )
 
 type Msgbuf struct {
@@ -28,5 +28,5 @@ type Msgbuf struct {
 
 type msgbufInternal struct {
 	Mtype uint64
-	Mtext [bufSize]byte
+	Mtext [BufSize]byte
 }

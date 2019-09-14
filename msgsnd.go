@@ -8,8 +8,8 @@ import (
 
 // Msgsnd calls the msgsnd() syscall.
 func Msgsnd(qid uint64, msg *Msgbuf, flags uint64) error {
-	if len(msg.Mtext) > bufSize {
-		return fmt.Errorf("mtext is too large, %d > %d", len(msg.Mtext), bufSize)
+	if len(msg.Mtext) > BufSize {
+		return fmt.Errorf("mtext is too large, %d > %d", len(msg.Mtext), BufSize)
 	}
 	qbuf := msgbufInternal{
 		Mtype: msg.Mtype,
